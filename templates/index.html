@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/main.css')}}"
+    />
+    <title>Creative Recipe Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Creative Recipe Generator</h1>
+      <form action="" method="post" class="form">
+        <div class="selects">
+          <div class="choice">
+            <label for="type">Meal Type</label>
+            <select name="type" id="type" required>
+              <option value="">Select Meal Type</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+          <div class="choice">
+            <label for="cuisine">Cuisine Preference:</label>
+            <select name="cuisine" id="cuisine" required>
+              <option value="">Select Cuisine Preference</option>
+              <option value="Ethiopian">Ethiopian</option>
+              <option value="Italian">Italian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Indian">Indian</option>
+              <option value="Chinese">Chinese</option>
+            </select>
+          </div>
+          <div class="choice">
+            <label for="restrictions">Dietary Restrictions:</label>
+            <select name="restrictions" id="restrictions" required>
+              <option value="">Select Dietary Restrictions</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="Gluten-Free">Gluten-Free</option>
+              <option value="none">None</option>
+            </select>
+          </div>
+          <div class="choice">
+            <label for="time">Cooking Time:</label>
+            <select name="time" id="time" required>
+              <option value="">Select Cooking Time</option>
+              <option value="less than 15 minutes">< 15 min</option>
+              <option value="15 minutes">15 min</option>
+              <option value="30 minutes">30 min</option>
+              <option value="1 hour">1 hr</option>
+              <option value="more than 1 hour">> 1 hr</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit">Generate Recipe</button>
+      </form>
+      <div id="response">
+        <h2>Generated Recipe:</h2>
+        <pre id="output"></pre>
+      </div>
+    </div>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+  </body>
+</html>
